@@ -21,7 +21,7 @@ function Product() {
       setIsLoading(true);
       try {
         const response = await axios.get(
-          "https://backend-bucket-api.vercel.app/api/data"
+          "https://bucket-katalog.vercel.app/api/data"
         );
         setProducts(response.data);
         setIsLoading(false);

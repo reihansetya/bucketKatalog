@@ -28,7 +28,7 @@ export const Admin = () => {
       setIsLoading(true);
       try {
         const response = await axios.get(
-          "https://api-bucket.onrender.com/api/data"
+          "https://bucketkatalog.onrender.com/api/data"
         ); // Ganti dengan URL API Anda
         setData(response.data);
         setFilterData(response.data);
@@ -56,10 +56,10 @@ export const Admin = () => {
   const handleDelete = async (id) => {
     try {
       // Menghapus data
-      await axios.delete(`https://api-bucket.onrender.com/api/data/${id}`);
+      await axios.delete(`https://bucketkatalog.onrender.com/api/data/${id}`);
       // Ambil data terbaru setelah penghapusan
       const response = await axios.get(
-        "https://api-bucket.onrender.com/api/data"
+        "https://bucketkatalog.onrender.com/api/data"
       );
       setData(response.data);
       setFilterData(response.data);

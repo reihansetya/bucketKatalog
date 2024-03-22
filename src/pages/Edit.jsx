@@ -54,10 +54,13 @@ const Edit = () => {
       for (let i = 0; i < formData.file.length; i++) {
         formFile.append("file", formData.file[i]);
       }
-      await axios.post("http://localhost:3001/api/data/upload", formFile);
+      await axios.post(
+        "https://bucketkatalog.onrender.com/api/data/upload",
+        formFile
+      );
 
       await axios.put(
-        `https://api-bucket.onrender.com/api/data/${id}`,
+        `https://bucketkatalog.onrender.com/api/data/${id}`,
         formData
       );
       setAlertMessage("Data updated successfully", "success");

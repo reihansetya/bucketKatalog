@@ -19,7 +19,7 @@ function Home() {
       setIsLoading(true);
       try {
         const response = await fetch(
-          `https://backend-bucket-api.vercel.app/api/data`
+          `https://bucket-katalog.vercel.app/api/data`
         ); // Adjust the path as needed
         console.log(response);
         const data = await response.json();

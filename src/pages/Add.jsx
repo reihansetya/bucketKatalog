@@ -48,10 +48,13 @@ export const Add = () => {
         formFile.append("file", formData.file[i]);
       }
 
-      await axios.post("http://localhost:3001/api/data/upload", formFile);
+      await axios.post(
+        "https://bucketkatalog.onrender.com/api/data/upload",
+        formFile
+      );
 
       const response = await axios.post(
-        "https://api-bucket.onrender.com/api/data",
+        "https://bucketkatalog.onrender.com/api/data",
         formData
       );
       setAlertMessage("Data added successfully", "success");
